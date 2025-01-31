@@ -31,4 +31,13 @@ body{
   .writeup{
     padding: 15px 25px;
   }
+  .item{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+  .item1 img{
+    width: 40px;
+    border-radius: 50%;
+  }
 }
