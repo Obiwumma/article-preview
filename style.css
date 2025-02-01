@@ -33,11 +33,23 @@ body{
   }
   .item{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 55px 160px 30px;
     align-items: center;
+    justify-content: stretch;
   }
   .item1 img{
     width: 40px;
     border-radius: 50%;
   }
+  .item2{
+    line-height: .4rem;
+  }
+  .item3 {
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    /* height: 30px; */
+    padding: 8px;
+
+  }
+  
 }
