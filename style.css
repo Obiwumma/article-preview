@@ -32,7 +32,7 @@ body{
     padding: 15px 25px;
   }
   .item{
-    display: grid;
+    display: none;
     grid-template-columns: 55px 160px 30px;
     align-items: center;
     justify-content: stretch;
@@ -49,7 +49,12 @@ body{
     background-color: hsl(210, 46%, 95%);
     /* height: 30px; */
     padding: 8px;
-
+  }
+  .hidden{
+    background-color: hsl(217, 19%, 35%);
+  }
+  .item5 img{
+    width: 20px;
   }
   
 }
