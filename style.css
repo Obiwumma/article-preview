@@ -28,15 +28,20 @@ body{
     background-color: #ffffff;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .writeup{
     padding: 15px 25px;
   }
   .item{
-    display: none;
+    display: grid;
     grid-template-columns: 55px 160px 30px;
     align-items: center;
-    justify-content: stretch;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
   }
   .item1 img{
     width: 40px;
@@ -53,7 +58,7 @@ body{
   }
   .hidden{
     background-color: hsl(217, 19%, 35%);
-    display: flex;
+    display: none;
     flex-direction: row;
     padding: 0 25px;
     /* justify-content: space-evenly; */
