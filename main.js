@@ -1,15 +1,15 @@
 const firstShareBtn = document.querySelector('.item3')
 const secondShareBtn = document.querySelector('.item6')
-const inactive = document.querySelector('.item')
-const active = document.querySelector('.hidden')
+const inactiveElement = document.querySelector('.item')
+const activeElement = document.querySelector('.hidden')
 
 function displayLinks() {
-  inactive.style.display = 'none'
-  active.style.display = 'flex'
+  inactiveElement.style.display = 'none'
+  activeElement.style.display = 'flex'
 }
 function hideLinks() {
-  inactive.style.display = 'grid'
-  active.style.display = 'none'
+  inactiveElement.style.display = 'grid'
+  activeElement.style.display = 'none'
 }
 
 firstShareBtn.addEventListener('click', displayLinks)
