@@ -93,5 +93,7 @@ body{
 }
 
 @media (min-width: 1440px) {
-  
+  .card{
+    display: flex;
+  }
 }
