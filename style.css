@@ -95,5 +95,28 @@ body{
 @media (min-width: 1440px) {
   .card{
     display: flex;
+    width: 650px;
   }
+  .image{
+    background-image: url(./images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .writeup{
+    padding-left: 35px;
+    padding-right: 50px;
+  }
+  .item{
+    display: grid;
+    grid-template-columns: 55px 160px 30px;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+
 }
