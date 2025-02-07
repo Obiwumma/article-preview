@@ -113,10 +113,11 @@ body{
   }
   .item{
     display: grid;
-    grid-template-columns: 55px 160px 30px;
+    grid-template-columns: 55px 230px 30px;
     align-items: center;
     padding-bottom: 10px;
-    padding-left: 0;
+    padding-left: 35px;
+    column-gap: 0;
+    justify-content: left;
   }
-
 }
