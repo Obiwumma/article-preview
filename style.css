@@ -105,19 +105,20 @@ body{
     width: 100%;
     height: auto;
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   .writeup{
     padding-left: 35px;
-    padding-right: 50px;
+    padding-right: 42px;
   }
   .item{
     display: grid;
-    grid-template-columns: 55px 230px 30px;
+    grid-template-columns: 55px 235px 30px;
     align-items: center;
     padding-bottom: 10px;
     padding-left: 35px;
     column-gap: 0;
     justify-content: left;
+    padding-top: 0;
   }
 }
