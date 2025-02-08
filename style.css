@@ -112,7 +112,7 @@ body{
     padding-right: 42px;
   }
   .item{
-    display: grid;
+    display: none;
     grid-template-columns: 55px 235px 30px;
     align-items: center;
     padding-bottom: 10px;
@@ -120,5 +120,19 @@ body{
     column-gap: 0;
     justify-content: left;
     padding-top: 0;
+  }
+  .hidden{
+    background-color: hsl(217, 19%, 35%);
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 100px;
+    flex-direction: row;
+    padding: 0 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 60px;
   }
 }
