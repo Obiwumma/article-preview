@@ -112,7 +112,7 @@ body{
     padding-right: 42px;
   }
   .item{
-    display: none;
+    display: grid;
     grid-template-columns: 55px 235px 30px;
     align-items: center;
     padding-bottom: 10px;
@@ -125,14 +125,23 @@ body{
     background-color: hsl(217, 19%, 35%);
     display: flex;
     position: relative;
-    top: 0;
-    left: 100px;
+    bottom: 110px;
+    left: 240px;
     flex-direction: row;
     padding: 0 25px;
     justify-content: space-evenly;
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    height: 60px;
+    height: 50px;
+    width: 165px;
   }
+  .item5{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .item6{
+    display: none;
+  }
+
 }
