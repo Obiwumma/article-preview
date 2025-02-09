@@ -34,6 +34,11 @@ body{
   .writeup{
     padding: 15px 25px;
   }
+  .write1{
+    color: hsl(217, 19%, 35%);
+      font-weight: bold;
+     font-size: 15px;
+  }
   .item{
     display: grid;
     grid-template-columns: 55px 160px 30px;
@@ -95,7 +100,7 @@ body{
 @media (min-width: 1440px) {
   .card{
     display: flex;
-    width: 650px;
+    width: 700px;
   }
   .image{
     background-image: url(./images/drawers.jpg);
@@ -110,6 +115,11 @@ body{
   .writeup{
     padding-left: 35px;
     padding-right: 42px;
+  }
+  .write1{
+    color: hsl(217, 19%, 35%);
+    font-weight: bold;
+    font-size: 20px;
   }
   .item{
     display: grid;
