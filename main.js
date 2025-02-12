@@ -31,6 +31,7 @@ function toggleLinks () {
 
 function onSmallScreen() {
   console.log("Now at 1023px or smaller");
+  hideLinks()
   firstShareBtn.addEventListener('click', displayLinks);
   secondShareBtn.addEventListener('click', hideLinks);
   firstShareBtn.removeEventListener("click", toggleLinks);
@@ -38,7 +39,6 @@ function onSmallScreen() {
 
 function onMediumScreen() {
   console.log("Now at 1024px or more");
-  
   firstShareBtn.removeEventListener("click", toggleLinks);
   firstShareBtn.addEventListener("click", toggleLinks);
   inactiveElement.style.display = 'grid';
