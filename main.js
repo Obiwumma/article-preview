@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function () {
 const firstShareBtn = document.querySelector('.item3');
 const secondShareBtn = document.querySelector('.item6');
 const inactiveElement = document.querySelector('.item');
@@ -35,13 +36,14 @@ function onSmallScreen() {
   firstShareBtn.addEventListener('click', displayLinks);
   secondShareBtn.addEventListener('click', hideLinks);
   firstShareBtn.removeEventListener("click", toggleLinks);
+  console.log(inactiveElement.style.display);
 }
 
 function onMediumScreen() {
   console.log("Now at 1024px or more");
+  inactiveElement.style.display = 'grid';
   firstShareBtn.removeEventListener("click", toggleLinks);
   firstShareBtn.addEventListener("click", toggleLinks);
-  inactiveElement.style.display = 'grid';
 
 }
 
@@ -55,3 +57,4 @@ function onScreenSize() {
 
 onScreenSize();
 window.addEventListener("resize", onScreenSize);
+});

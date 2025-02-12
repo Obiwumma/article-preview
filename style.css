@@ -125,7 +125,7 @@ body{
     height: 70px;
   }
   .item{
-    display: grid;
+    display: grid !important;
     grid-template-columns: 55px 235px 30px;
     align-items: center;
     padding-bottom: 10px;
