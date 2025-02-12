@@ -121,6 +121,9 @@ body{
     font-weight: bold;
     font-size: 20px;
   }
+  footer{
+    height: 70px;
+  }
   .item{
     display: grid;
     grid-template-columns: 55px 235px 30px;
