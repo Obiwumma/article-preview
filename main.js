@@ -20,14 +20,14 @@ function bothLinks() {
 }
 
 
-firstShareBtn.addEventListener("click", function () {
+function toggleLinks () {
   if (!isClicked) {
     bothLinks();
   } else {
     hideLinks();
   }
   isClicked = !isClicked;
-});
+};
 
 function onSmallScreen() {
   console.log("Now at 1023px or smaller");
@@ -37,20 +37,10 @@ function onSmallScreen() {
 
 function onMediumScreen() {
   console.log("Now at 1024px or more");
-  firstShareBtn.addEventListener("click", function () {
-    if (!isClicked) {
-      bothLinks();
-      console.log("button was clicked")
-    } else {
-      hideLinks();
-      console.log("button was clicked again")
-    }
-    isClicked = !isClicked;
-  });
+ 
+  firstShareBtn.removeEventListener("click", toggleLinks);
+  firstShareBtn.addEventListener("click", toggleLinks);
 }
-
-myButton.removeEventListener("click", toggleLinks);
-myButton.addEventListener("click", toggleLinks);
 
 function onScreenSize() {
   if (window.matchMedia("(max-width: 1023px)").matches) {
