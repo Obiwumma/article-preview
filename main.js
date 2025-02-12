@@ -1,55 +1,64 @@
-const firstShareBtn = document.querySelector('.item3')
-const secondShareBtn = document.querySelector('.item6')
-const inactiveElement = document.querySelector('.item')
-const activeElement = document.querySelector('.hidden')
+const firstShareBtn = document.querySelector('.item3');
+const secondShareBtn = document.querySelector('.item6');
+const inactiveElement = document.querySelector('.item');
+const activeElement = document.querySelector('.hidden');
 let isClicked = false;
 
-
 function displayLinks() {
-  inactiveElement.style.display = 'none'
-  activeElement.style.display = 'flex'
+  inactiveElement.style.display = 'none';
+  activeElement.style.display = 'flex';
 }
+
 function hideLinks() {
-  inactiveElement.style.display = 'grid'
-  activeElement.style.display = 'none'
+  inactiveElement.style.display = 'grid';
+  activeElement.style.display = 'none';
 }
+
 function bothLinks() {
-  inactiveElement.style.display = 'grid'
-  activeElement.style.display = 'flex'
+  inactiveElement.style.display = 'grid';
+  activeElement.style.display = 'flex';
 }
 
-// firstShareBtn.addEventListener('click', displayLinks)
 
-// secondShareBtn.addEventListener('click', hideLinks)
-
-
+firstShareBtn.addEventListener("click", function () {
+  if (!isClicked) {
+    bothLinks();
+  } else {
+    hideLinks();
+  }
+  isClicked = !isClicked;
+});
 
 function onSmallScreen() {
   console.log("Now at 1023px or smaller");
   firstShareBtn.addEventListener('click', displayLinks);
-  secondShareBtn.addEventListener('click', hideLinks)
+  secondShareBtn.addEventListener('click', hideLinks);
 }
 
 function onMediumScreen() {
-  console.log("Now at 768px or more");
-  firstShareBtn.addEventListener('click', bothLinks);
+  console.log("Now at 1024px or more");
+  firstShareBtn.addEventListener("click", function () {
+    if (!isClicked) {
+      bothLinks();
+      console.log("button was clicked")
+    } else {
+      hideLinks();
+      console.log("button was clicked again")
+    }
+    isClicked = !isClicked;
+  });
 }
 
+myButton.removeEventListener("click", toggleLinks);
+myButton.addEventListener("click", toggleLinks);
 
-// Function to check screen size and run the correct function
 function onScreenSize() {
   if (window.matchMedia("(max-width: 1023px)").matches) {
-      onSmallScreen();
+    onSmallScreen();
   } else if (window.matchMedia("(max-width: 1024px)").matches) {
-      onMediumScreen();
-  } 
-  // else {
-  //     onLargeScreen();
-  // }
+    onMediumScreen();
+  }
 }
 
-// Run check when the page loads
 onScreenSize();
-
-// Run check whenever the window is resized
 window.addEventListener("resize", onScreenSize);
